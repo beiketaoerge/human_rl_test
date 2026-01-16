@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="simstl装配另存">
+  <link
+    name="pelvis_link">
+    <inertial>
+      <origin
+        xyz="-3.13217732446242E-17 -7.0033346998907E-17 -0.0475407842849238"
+        rpy="0 0 0" />
+      <mass
+        value="2.59612258544044" />
+      <inertia
+        ixx="0.00438862597142726"
+        ixy="6.02047322668908E-08"
+        ixz="1.42792133472184E-16"
+        iyy="0.0187233240732958"
+        iyz="2.87104161009405E-16"
+        izz="0.0192780986166987" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/pelvis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/pelvis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_hip_pitch_link">
+    <inertial>
+      <origin
+        xyz="-0.0155421053851232 -0.0591025316841065 -2.87096735274162E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.48627427894323" />
+      <inertia
+        ixx="0.00409740084322351"
+        ixy="-0.00028512426839898"
+        ixz="9.48676900924816E-20"
+        iyy="0.00234685691462312"
+        iyz="3.93023287525995E-19"
+        izz="0.00443778748127328" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_hip_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_hip_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_left_hip_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0.161396413151412 0 -0.0931822625792073"
+      rpy="1.66022681549075 0.00230876585102084 -0.0515867968423578" />
+    <parent
+      link="pelvis_link" />
+    <child
+      link="left_hip_pitch_link" />
+    <axis
+      xyz="0.86602540378444 -0.499999999999997 0" />
+  </joint>
+  <link
+    name="left_hip_roll_link">
+    <inertial>
+      <origin
+        xyz="-2.34562343687239E-07 -0.0685868098115105 -1.34414325419357E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.657908229146672" />
+      <inertia
+        ixx="0.00191614855769591"
+        ixy="7.84961952204997E-09"
+        ixz="-4.73133030434156E-09"
+        iyy="0.00141956339015436"
+        iyz="-2.11513213226652E-09"
+        izz="0.00172254146453579" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_hip_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_hip_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_left_hip_roll_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0187966701642662 -0.0791477374207923 0"
+      rpy="0 0 -0.0314457539189733" />
+    <parent
+      link="left_hip_pitch_link" />
+    <child
+      link="left_hip_roll_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_hip_yaw_link">
+    <inertial>
+      <origin
+        xyz="-1.31838984174237E-15 -0.075044352149648 5.27355936696949E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.558150874810084" />
+      <inertia
+        ixx="0.00212246981460302"
+        ixy="5.55653613398821E-19"
+        ixz="1.66018457661843E-19"
+        iyy="0.00126395439228814"
+        iyz="-3.2991933295555E-19"
+        izz="0.00182294282321998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_hip_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_hip_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_left_hip_yaw_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.102447512227952 0"
+      rpy="0 -1.54131363589377 0" />
+    <parent
+      link="left_hip_roll_link" />
+    <child
+      link="left_hip_yaw_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_knee_Link">
+    <inertial>
+      <origin
+        xyz="-2.57432963834958E-15 -0.134657000959037 -4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="3.1244862763748" />
+      <inertia
+        ixx="0.0534639775774041"
+        ixy="-1.51212321743838E-16"
+        ixz="5.42101086242752E-18"
+        iyy="0.00419786240262267"
+        iyz="1.82581128154217E-17"
+        izz="0.0550865051574955" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_knee_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_knee_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_left_knee_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.126252487772048 0"
+      rpy="-3.14159265358979 0 -3.07386322886552" />
+    <parent
+      link="left_hip_yaw_link" />
+    <child
+      link="left_knee_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_ankle_pitch_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.00749999999999995 3.60822483003176E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.012" />
+      <inertia
+        ixx="1.3E-06"
+        ixy="-1.10511329837084E-21"
+        ixz="1.27385814333166E-22"
+        iyy="8E-07"
+        iyz="2.06795153138257E-25"
+        izz="1.3E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_ankle_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_ankle_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_left_ankle_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.4335 0"
+      rpy="-3.14159265358979 0 -3.02669614082178" />
+    <parent
+      link="left_knee_Link" />
+    <child
+      link="left_ankle_pitch_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_ankle_roll_link">
+    <inertial>
+      <origin
+        xyz="-6.66133814775094E-16 2.08166817117217E-16 0.0219999999999999"
+        rpy="0 0 0" />
+      <mass
+        value="0.2058" />
+      <inertia
+        ixx="0.000759676400000001"
+        ixy="-3.70259277068536E-19"
+        ixz="-1.27478458561772E-19"
+        iyy="8.73964000000002E-05"
+        iyz="2.15231071897318E-18"
+        izz="0.000840350000000001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_ankle_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_ankle_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_left_ankle_roll_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0150000000000001 0"
+      rpy="3.14159265358979 1.55763311900639 1.57079632679489" />
+    <parent
+      link="left_ankle_pitch_Link" />
+    <child
+      link="left_ankle_roll_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_hip_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.0714846487295383 -0.109347451598905 7.80625564189563E-18"
+        rpy="0 0 0" />
+      <mass
+        value="1.48627427894323" />
+      <inertia
+        ixx="0.00409740084322351"
+        ixy="-0.00028512426839898"
+        ixz="1.89735380184963E-19"
+        iyy="0.00234685691462313"
+        iyz="9.75781955236954E-19"
+        izz="0.00443778748127328" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_hip_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_hip_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_right_hip_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0743696590367509 0 -0.0429373426644086"
+      rpy="1.45122683266207 0.00412712801290447 -3.07266899311436" />
+    <parent
+      link="pelvis_link" />
+    <child
+      link="right_hip_pitch_link" />
+    <axis
+      xyz="0.866025403784439 -0.5 0" />
+  </joint>
+  <link
+    name="right_hip_roll_link">
+    <inertial>
+      <origin
+        xyz="-2.24057862874272E-07 -0.0685868133192409 -1.31409841380714E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.657907460062175" />
+      <inertia
+        ixx="0.00191614714457662"
+        ixy="7.48729796247709E-09"
+        ixz="-4.44906741748361E-09"
+        iyy="0.00141956237301229"
+        iyz="-2.85523736296182E-09"
+        izz="0.00172254042503048" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_hip_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_hip_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_right_hip_roll_joint"
+    type="continuous">
+    <origin
+      xyz="0.0682300839503951 -0.129392657335591 0"
+      rpy="-3.14159265358979 0 -3.12592071196651" />
+    <parent
+      link="right_hip_pitch_link" />
+    <child
+      link="right_hip_roll_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_hip_yaw_Link">
+    <inertial>
+      <origin
+        xyz="-5.41233724504764E-16 -0.0776217768635346 -1.60982338570648E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.558150874810084" />
+      <inertia
+        ixx="0.00212246981460302"
+        ixy="6.09863722023096E-19"
+        ixz="6.50521303491303E-19"
+        iyy="0.00126395439228814"
+        iyz="8.63126573252132E-19"
+        izz="0.00182294282321998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_hip_yaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_hip_yaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_right_hip_yaw_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0998700875140655 0"
+      rpy="3.14159265358979 -1.42555167118887 -3.14159265358979" />
+    <parent
+      link="right_hip_roll_link" />
+    <child
+      link="right_hip_yaw_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_knee_Link">
+    <inertial>
+      <origin
+        xyz="4.97546413895378E-06 -0.134635885197478 2.22044604925031E-15"
+        rpy="0 0 0" />
+      <mass
+        value="3.1242416304843" />
+      <inertia
+        ixx="0.0534461721077923"
+        ixy="4.25331801489698E-06"
+        ixz="-8.67361737988404E-19"
+        iyy="0.00419781224890989"
+        iyz="-7.61042162449044E-17"
+        izz="0.0550686862310545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_knee_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_knee_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_right_knee_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.128829912485935 0"
+      rpy="3.14159265358979 0 3.0669385411108" />
+    <parent
+      link="right_hip_yaw_Link" />
+    <child
+      link="right_knee_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_ankle_pitch_Link">
+    <inertial>
+      <origin
+        xyz="4.04382777263734E-12 -0.00750000000054107 -1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.012" />
+      <inertia
+        ixx="1.3E-06"
+        ixy="-9.92616735063633E-23"
+        ixz="-1.58818677610181E-22"
+        iyy="8.00000000000001E-07"
+        iyz="-4.13383511123376E-22"
+        izz="1.3E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_ankle_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_ankle_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_right_ankle_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.433500000000003 0"
+      rpy="3.14159265358979 0 3.00786762036151" />
+    <parent
+      link="right_knee_Link" />
+    <child
+      link="right_ankle_pitch_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_ankle_roll_Link">
+    <inertial>
+      <origin
+        xyz="-1.13797860024079E-14 0.10309531204532 0.0220000000005403"
+        rpy="0 0 0" />
+      <mass
+        value="0.2058" />
+      <inertia
+        ixx="0.000759676399999998"
+        ixy="2.22346148654254E-19"
+        ixz="1.30231315640349E-19"
+        iyy="8.73963999999998E-05"
+        iyz="-1.20024568625934E-18"
+        izz="0.000840349999999998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_ankle_roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_ankle_roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0_right_ankle_roll_joint"
+    type="continuous">
+    <origin
+      xyz="-0.103095312041276 -0.0150000000000013 0"
+      rpy="3.14159265358979 1.54968400377694 1.5707963267949" />
+    <parent
+      link="right_ankle_pitch_Link" />
+    <child
+      link="right_ankle_roll_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="waist_yaw_link">
+    <inertial>
+      <origin
+        xyz="1.85718555524981E-18 -9.0439728048059E-19 0.045"
+        rpy="0 0 0" />
+      <mass
+        value="1.34614103613669" />
+      <inertia
+        ixx="0.00251088956765396"
+        ixy="-1.0842021724855E-19"
+        ixz="7.35364985719662E-20"
+        iyy="0.00251088956765396"
+        iyz="3.89168615009538E-23"
+        izz="0.00320448873652339" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/waist_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/waist_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_yaw_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 2.61746474058066" />
+    <parent
+      link="pelvis_link" />
+    <child
+      link="waist_yaw_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="waist_roll_Link">
+    <inertial>
+      <origin
+        xyz="-9.14816347633244E-18 0.00600000000000001 -2.02489287931573E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00904778684233861" />
+      <inertia
+        ixx="4.90691639749498E-06"
+        ixy="3.26265223399926E-55"
+        ixz="3.27563522570999E-22"
+        iyy="4.90691639749498E-06"
+        iyz="-4.19629427726875E-39"
+        izz="1.62860163162095E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/waist_roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/waist_roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_roll_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.09"
+      rpy="1.5707963267949 0 -2.40842710613758" />
+    <parent
+      link="waist_yaw_link" />
+    <child
+      link="waist_roll_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="torso_Link">
+    <inertial>
+      <origin
+        xyz="0.13511217162071 0.254421872284227 0.00415780310911415"
+        rpy="0 0 0" />
+      <mass
+        value="15.0305076014071" />
+      <inertia
+        ixx="0.336979759774154"
+        ixy="3.11594778375947E-17"
+        ixz="6.93889390390723E-18"
+        iyy="0.110155579394109"
+        iyz="-6.29406711770686E-17"
+        izz="0.27280010211887" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/torso_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/torso_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.00600000000000001 0.133401762598207"
+      rpy="-0.478571446934751 1.57079631189374 -0.47857144693475" />
+    <parent
+      link="waist_roll_Link" />
+    <child
+      link="torso_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="head_Link">
+    <inertial>
+      <origin
+        xyz="-1.30104260698261E-17 1.60461921527855E-17 0.075"
+        rpy="0 0 0" />
+      <mass
+        value="1.65" />
+      <inertia
+        ixx="0.0047575"
+        ixy="-3.25260651745651E-19"
+        ixz="3.21420930934541E-19"
+        iyy="0.00446875"
+        iyz="-1.43960118926078E-19"
+        izz="0.00303875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/head_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/head_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_joint"
+    type="continuous">
+    <origin
+      xyz="0.13511217162071 0.454221618593478 0.0041578031091142"
+      rpy="1.57079632679489 -1.50925701327379 -3.14159265358978" />
+    <parent
+      link="torso_Link" />
+    <child
+      link="head_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_shoulder_pitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.0571953620554074 0 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.756178654371521" />
+      <inertia
+        ixx="0.000818946394217298"
+        ixy="-3.04931861011548E-20"
+        ixz="1.35525271560688E-20"
+        iyy="0.00117485700579858"
+        iyz="3.3881317890172E-20"
+        izz="0.0014613275975626" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_shoulder_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_shoulder_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_right_shoulder_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0.13511217162071 0.378721618593478 -0.167740511837185"
+      rpy="-1.34546852580314 -1.57079631189374 1.39402794418769" />
+    <parent
+      link="torso_Link" />
+    <child
+      link="right_shoulder_pitch_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_shoulder_roll_link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -0.0930000000000001 0.0601590944459596"
+        rpy="0 0 0" />
+      <mass
+        value="0.44352" />
+      <inertia
+        ixx="0.000419274240000001"
+        ixy="1.0545560193316E-19"
+        ixz="-2.03287907341032E-20"
+        iyy="0.000547008"
+        iyz="3.55753837846806E-20"
+        izz="0.000393845760000001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_shoulder_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_right_shoulder_roll_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0714016850537004 0 -0.0601590944459594"
+      rpy="0 0 -0.141037189240337" />
+    <parent
+      link="right_shoulder_pitch_Link" />
+    <child
+      link="right_shoulder_roll_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_shoulder_yaw_link">
+    <inertial>
+      <origin
+        xyz="4.85101792069287E-10 -0.0608138131568556 -4.3638629332321E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.254258436547984" />
+      <inertia
+        ixx="0.000205073524747574"
+        ixy="1.16012251376049E-10"
+        ixz="2.90674320211986E-12"
+        iyy="0.000260586055040214"
+        iyz="6.98509429957568E-14"
+        izz="0.000273860607436206" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_shoulder_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_shoulder_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_right_shoulder_yaw_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.149186185823977 0.0601590944459594"
+      rpy="0 -0.283970830651577 0" />
+    <parent
+      link="right_shoulder_roll_link" />
+    <child
+      link="right_shoulder_yaw_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_elbow_link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -0.0825 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.1836" />
+      <inertia
+        ixx="9.52271999999999E-05"
+        ixy="7.53065229668276E-20"
+        ixz="-4.2351647362715E-22"
+        iyy="0.000140457825"
+        iyz="1.56701095242046E-20"
+        izz="9.4190625E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_elbow_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_elbow_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_right_elbow_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0608138141760233 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_shoulder_yaw_link" />
+    <child
+      link="right_elbow_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_wrist_roll_link">
+    <inertial>
+      <origin
+        xyz="0 -0.04049436594513 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.145450242074064" />
+      <inertia
+        ixx="6.89161428227173E-05"
+        ixy="-1.27054942088145E-21"
+        ixz="-7.6232965252887E-21"
+        iyy="6.89161428227173E-05"
+        iyz="8.470329472543E-22"
+        izz="5.90709795623292E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_wrist_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_wrist_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wrist_roll_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.09750563405487 0"
+      rpy="0 -0.0890412963919442 0" />
+    <parent
+      link="right_elbow_link" />
+    <child
+      link="right_wrist_roll_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wrist_yaw_link">
+    <inertial>
+      <origin
+        xyz="4.16333634234434E-17 -0.06 1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.161163703129156" />
+      <inertia
+        ixx="7.98969058262792E-05"
+        ixy="0"
+        ixz="1.6940658945086E-21"
+        iyy="7.98969058262792E-05"
+        iyz="-8.15269211732264E-21"
+        izz="7.25236664081203E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_wrist_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_wrist_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wrist_yaw_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.04049436594513 0"
+      rpy="-0.0238050261850699 -1.57079631189374 0" />
+    <parent
+      link="right_wrist_roll_link" />
+    <child
+      link="right_wrist_yaw_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_wrist_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.0606743013125314 -0.105 -4.16333634234434E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.404" />
+      <inertia
+        ixx="0.00366210000000001"
+        ixy="7.11507675693612E-19"
+        ixz="-4.06575814682064E-19"
+        iyy="0.0026325"
+        iyz="5.14996031930615E-19"
+        izz="0.002925" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_wrist_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/right_wrist_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wrist_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.06 0.0606743013125311"
+      rpy="-0.46061271695283 1.57079630572147 -0.521246951491958" />
+    <parent
+      link="right_wrist_yaw_link" />
+    <child
+      link="right_wrist_pitch_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_pitch_link">
+    <inertial>
+      <origin
+        xyz="-0.0571953620554074 1.11022302462516E-16 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.756178654371521" />
+      <inertia
+        ixx="0.000818946394217297"
+        ixy="2.08370105024558E-19"
+        ixz="-1.35525271560688E-20"
+        iyy="0.00117485700579858"
+        iyz="1.62630325872826E-19"
+        izz="0.0014613275975626" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_shoulder_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_shoulder_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_left_shoulder_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0.13511217162071 0.378721618593478 0.176056118055414"
+      rpy="1.74546852580314 1.57079631189374 -1.39402794418769" />
+    <parent
+      link="torso_Link" />
+    <child
+      link="left_shoulder_pitch_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_roll_link">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -0.093 0.0598521578408988"
+        rpy="0 0 0" />
+      <mass
+        value="0.44352" />
+      <inertia
+        ixx="0.00041927424"
+        ixy="1.78723951870657E-19"
+        ixz="-4.06575814682064E-20"
+        iyy="0.000547007999999999"
+        iyz="6.7762635780344E-20"
+        izz="0.00039384576" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_shoulder_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_left_shoulder_roll_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0714016850537005 0 -0.0598521578408988"
+      rpy="0 0 -2.75570606328591" />
+    <parent
+      link="left_shoulder_pitch_link" />
+    <child
+      link="left_shoulder_roll_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_shoulder_yaw_link">
+    <inertial>
+      <origin
+        xyz="7.41615435728704E-10 -0.0869999999999999 -4.36420293889461E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.254258436472472" />
+      <inertia
+        ixx="0.000205073524658416"
+        ixy="1.15994370127567E-10"
+        ixz="2.8348872999507E-12"
+        iyy="0.000260586055033639"
+        iyz="2.03287907341032E-20"
+        izz="0.000273860607433959" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_shoulder_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_shoulder_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_yaw_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.123 0.0598521578408988"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_roll_link" />
+    <child
+      link="left_shoulder_yaw_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_elbow_link">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 -0.0825 0.0467403381649757"
+        rpy="0 0 0" />
+      <mass
+        value="0.1836" />
+      <inertia
+        ixx="9.52272000000001E-05"
+        ixy="7.81387893842092E-20"
+        ixz="3.3881317890172E-21"
+        iyy="0.000140457825"
+        iyz="-1.01643953670516E-20"
+        izz="9.41906250000001E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_elbow_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_elbow_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_left_elbow_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0869999999999999 -0.0467403381649755"
+      rpy="0 0 -0.262517066204179" />
+    <parent
+      link="left_shoulder_yaw_link" />
+    <child
+      link="left_elbow_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_wrist_roll_link">
+    <inertial>
+      <origin
+        xyz="0 -0.0350763360926024 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.145450242074064" />
+      <inertia
+        ixx="6.89161428227173E-05"
+        ixy="1.48230765769503E-21"
+        ixz="-1.94817577868489E-20"
+        iyy="6.89161428227173E-05"
+        iyz="5.50571415715295E-21"
+        izz="5.90709795623291E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_wrist_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_wrist_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_roll_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.102923663907398 0.0467403381649757"
+      rpy="0 -0.374630384932382 0" />
+    <parent
+      link="left_elbow_link" />
+    <child
+      link="left_wrist_roll_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_wrist_yaw_link">
+    <inertial>
+      <origin
+        xyz="0 -0.06 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.161163703129156" />
+      <inertia
+        ixx="7.98969058262793E-05"
+        ixy="-8.470329472543E-22"
+        ixz="1.01643953670516E-20"
+        iyy="7.98969058262793E-05"
+        iyz="-1.78935710107471E-20"
+        izz="7.25236664081204E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_wrist_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_wrist_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_yaw_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.0350763360926024 0"
+      rpy="0.0238050261850699 -1.57079631189374 0" />
+    <parent
+      link="left_wrist_roll_link" />
+    <child
+      link="left_wrist_yaw_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wrist_pitch_link">
+    <inertial>
+      <origin
+        xyz="-0.077430816903333 -0.105 8.32667268468867E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.404" />
+      <inertia
+        ixx="0.0036621"
+        ixy="-2.14807555423691E-18"
+        ixz="0"
+        iyy="0.0026325"
+        iyz="7.9959910220806E-19"
+        izz="0.002925" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_wrist_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://simstl装配另存/meshes/left_wrist_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0600000000000001 -0.0774308169033325"
+      rpy="0.46061271695283 1.57079630572147 0.521246951491958" />
+    <parent
+      link="left_wrist_yaw_link" />
+    <child
+      link="left_wrist_pitch_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
