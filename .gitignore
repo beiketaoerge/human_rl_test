@@ -71,5 +71,9 @@ datasets
 *.STL
 **/env.yaml
 
+# Keep full URDF assets for dt_114
+!urdf_dt_114/export.log
+!urdf_dt_114/meshes/*.STL
+
 # Mimic
 *.npz
