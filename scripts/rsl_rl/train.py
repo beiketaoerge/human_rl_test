@@ -11,6 +11,30 @@
 import gymnasium as gym
 import pathlib
 import sys
+import os
+
+# --- Fix for torch import issue ---
+# Remove Isaac Sim's bundled torch paths from sys.path if present
+sys.path = [p for p in sys.path if "omni.isaac.ml_archive/pip_prebundle" not in p]
+
+# Ensure conda site-packages is at the front
+# We try to find the site-packages of the current python executable
+import site
+for site_pkg in site.getsitepackages():
+    if site_pkg not in sys.path:
+        sys.path.insert(0, site_pkg)
+    else:
+        # Move to front
+        sys.path.remove(site_pkg)
+        sys.path.insert(0, site_pkg)
+
+import torch
+import torchvision # Import torchvision early to prevent Isaac Sim from loading its own
+print(f"[INFO] Torch file: {torch.__file__}")
+print(f"[INFO] Torch version: {torch.__version__}")
+print(f"[INFO] Torchvision file: {torchvision.__file__}")
+print(f"[INFO] Torchvision version: {torchvision.__version__}")
+# ----------------------------------
 
 sys.path.insert(0, f"{pathlib.Path(__file__).parent.parent}")
 from list_envs import import_packages  # noqa: F401

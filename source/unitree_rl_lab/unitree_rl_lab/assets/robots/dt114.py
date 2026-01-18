@@ -14,7 +14,7 @@ from isaaclab.assets.articulation import ArticulationCfg
 from isaaclab.utils import configclass
 
 # Path to the DT114 URDF package
-DT114_URDF_DIR = "/home/tao/Downloads/unitree_rl_lab/urdf_dt_114"
+DT114_URDF_DIR = "/home/bdi/dt/human_rl_test/urdf_dt_114"
 
 
 @configclass
