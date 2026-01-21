@@ -87,6 +87,49 @@ class DT114UrdfFileCfg(sim_utils.UrdfFileCfg):
         # Replace package:// paths with relative paths
         urdf_content = urdf_content.replace("package://simstl装配另存/meshes/", "meshes/")
 
+        # --- Inject Limits (Fix for continuous joints) ---
+        import re
+
+        def get_limit_for_joint(joint_name):
+            # Define limits (lower, upper) for different joints
+            if "hip_pitch" in joint_name:
+                return -1.2, 1.2
+            elif "hip_roll" in joint_name:
+                return -0.5, 0.5  # Restrict roll to avoid wide stance
+            elif "hip_yaw" in joint_name:
+                return -0.5, 0.5
+            elif "knee" in joint_name:
+                return 0.0, 2.5   # Knee usually only bends one way
+            elif "ankle_pitch" in joint_name:
+                return -1.0, 1.0
+            elif "ankle_roll" in joint_name:
+                return -0.5, 0.5
+            elif "waist" in joint_name:
+                return -1.0, 1.0
+            elif "head" in joint_name:
+                return -1.0, 1.0
+            elif "shoulder" in joint_name:
+                return -3.14, 3.14
+            elif "elbow" in joint_name:
+                return -2.5, 2.5
+            elif "wrist" in joint_name:
+                return -2.0, 2.0
+            return -3.14, 3.14  # Default fallback
+
+        # Regex to find joints and inject limits
+        # Matches: <joint name="xxx" type="continuous">
+        pattern = re.compile(r'<joint\s+name="([^"]+)"\s+type="continuous">')
+        
+        def replace_callback(match):
+            joint_name = match.group(1)
+            lower, upper = get_limit_for_joint(joint_name)
+            # Change type to revolute and add limit tag
+            return (f'<joint name="{joint_name}" type="revolute">\n'
+                    f'    <limit lower="{lower}" upper="{upper}" effort="200" velocity="20"/>')
+
+        urdf_content = pattern.sub(replace_callback, urdf_content)
+        # ------------------------------------------------
+
         with open(self.asset_path, "w", encoding="utf-8") as f:
             f.write(urdf_content)
 
@@ -105,12 +148,20 @@ UNITREE_DT114_CFG = DT114ArticulationCfg(
         joint_pos={
             # Legs - slight crouch for stability
             # NOTE: Isaac Sim converts "0_" prefix to "a__"
-            "a__.*_hip_pitch_joint": -0.15,
-            "a__.*_hip_roll_joint": 0.0,
-            "a__.*_hip_yaw_joint": 0.0,
-            "a__.*_knee_joint": 0.35,
-            "a__.*_ankle_pitch_joint": -0.2,
-            "a__.*_ankle_roll_joint": 0.0,
+            # Left Leg
+            "a__left_hip_pitch_joint": -0.15,
+            "a__left_hip_roll_joint": 0.0,
+            "a__left_hip_yaw_joint": 0.0,
+            "a__left_knee_joint": 0.35,
+            "a__left_ankle_pitch_joint": -0.2,
+            "a__left_ankle_roll_joint": 0.0,
+            # Right Leg
+            "a__right_hip_pitch_joint": -0.15,
+            "a__right_hip_roll_joint": 0.0,
+            "a__right_hip_yaw_joint": 0.0,
+            "a__right_knee_joint": 0.35,
+            "a__right_ankle_pitch_joint": -0.2,
+            "a__right_ankle_roll_joint": 0.0,
             # Waist
             "waist_yaw_joint": 0.0,
             "waist_roll_joint": 0.0,

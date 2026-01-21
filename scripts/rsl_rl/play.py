@@ -191,6 +191,18 @@ def main():
         with torch.inference_mode():
             # agent stepping
             actions = policy(obs)
+            
+            # --- Debug Print ---
+            if timestep % 50 == 0:
+                print(f"\n[DEBUG] Step {timestep}")
+                # Print action values for Hip Yaw (Left: 2, Right: 8)
+                print(f"  Actions - Left Hip Yaw: {actions[0, 2]:.4f}, Right Hip Yaw: {actions[0, 8]:.4f}")
+                # Print action values for Hip Roll (Left: 1, Right: 7)
+                print(f"  Actions - Left Hip Roll: {actions[0, 1]:.4f}, Right Hip Roll: {actions[0, 7]:.4f}")
+                # Print action values for Hip Pitch (Left: 0, Right: 6)
+                print(f"  Actions - Left Hip Pitch: {actions[0, 0]:.4f}, Right Hip Pitch: {actions[0, 6]:.4f}")
+            # -------------------
+
             # env stepping
             obs, _, _, _ = env.step(actions)
         if args_cli.video:
